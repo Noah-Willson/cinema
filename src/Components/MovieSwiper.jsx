@@ -7,7 +7,7 @@ import 'swiper/css/effect-coverflow'
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 import './movieSwiper.css'
 
-export default function MovieSwiper({ slides, slideChange  }) {
+export default function MovieSwiper({ slides, slideChange }) {
     const handleSlideClick = (id) => {
         slideChange(id);
     };
@@ -39,7 +39,7 @@ export default function MovieSwiper({ slides, slideChange  }) {
             {
                 slides.map(slide => (
                     <SwiperSlide key={slide._id}>
-                        <img src={slide.previewImg}  alt="Preview Image" onClick={() => handleSlideClick(slide._id)} />
+                        <img src={slide.previewImg} alt="Preview Image" onClick={() => handleSlideClick(slide._id)} />
                     </SwiperSlide>
                 ))
             }
